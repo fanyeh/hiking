@@ -1,0 +1,14 @@
+.navList {
+  padding: 0;
+  white-space: nowrap;
+}
+
+.navList li {
+  list-style-type: none;
+  padding: 0 1.5em;
+}
+
+.navList,
+.navList li {
+  display: inline-block;
+}

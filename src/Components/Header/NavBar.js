@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
+import style from './NavBar.css';
 
 class NavBar extends Component {
   render() {
     return (
       <nav>
-        <div className="logo">Logo</div>
-        <ul className="navList">
-          <li />
+        {/* <div className={style.logo}>Logo</div> */}
+        <ul className={style.navList}>
           <li>Home</li>
           <li>Pages</li>
           <li>Treks</li>
@@ -15,12 +15,12 @@ class NavBar extends Component {
           <li>Elements</li>
           <li>Contact</li>
           <li>
-            <i class="fas fa-search" />
+            <i className="fas fa-search" />
           </li>
         </ul>
-        <div className="menuIcon">
-          <i class="fas fa-bars fa-2x" />
-        </div>
+        {/* <div className={style.menuIcon}>
+          <i className="fas fa-bars fa-2x" />
+        </div> */}
       </nav>
     );
   }
