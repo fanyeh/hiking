@@ -1,3 +1,7 @@
+nav {
+  display: inline-block;
+}
+
 .navList {
   padding: 0;
   white-space: nowrap;
@@ -6,6 +10,10 @@
 .navList li {
   list-style-type: none;
   padding: 0 1.5em;
+}
+
+.navList li:hover {
+  color: rgb(203, 189, 154);
 }
 
 .navList,

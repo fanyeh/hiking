@@ -1,0 +1,28 @@
+.v-align {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header {
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  border-bottom: 1px solid white;
+}
+.logo {
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  composes: v-align;
+}
+
+.menuIcon {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  composes: v-align;
+}
