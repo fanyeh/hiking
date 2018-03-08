@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import NavBar from './Components/Header/NavBar';
+import Header from './Components/Header';
 import './normalize.css';
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <NavBar />
-        </header>
+        <Header />
       </div>
     );
   }
