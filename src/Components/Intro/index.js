@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Slider from './Slider';
+import style from './index.css';
 
 class Intro extends Component {
   render() {
     return (
-      <section className="Intro">
+      <section className={style.intro}>
         <Slider />
       </section>
     );

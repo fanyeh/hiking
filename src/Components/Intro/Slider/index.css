@@ -1,0 +1,35 @@
+.info {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+.slider {
+  overflow: hidden;
+  height: 66vw;
+}
+
+.slider img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.moreInfo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.moreInfo button {
+  padding: 0.75em 2em;
+  border-radius: 3px;
+  background-color: rgb(204, 190, 156);
+  color: white;
+  font-size: 0.5em;
+  border-color: rgb(204, 190, 156);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
