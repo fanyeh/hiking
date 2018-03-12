@@ -2,21 +2,17 @@ import React, { Component } from 'react';
 import style from './SliderController.css';
 
 class SliderController extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   render() {
     return (
-      <div className={style.sliderController}>
-        <div className={style.slideLeft}>
-          <button className={style.controlButton}>
+      <div className={style.container}>
+        <div className={style.left}>
+          <button className={style.button} onClick={() => this.props.onClick('left')}>
             <i className="fas fa-angle-left fa-2x" />
           </button>
         </div>
         <div className={style.center}>{this.props.children}</div>
-        <div className={style.slideRight}>
-          <button className={style.controlButton}>
+        <div className={style.right}>
+          <button className={style.button} onClick={() => this.props.onClick('right')}>
             <i className="fas fa-angle-right fa-2x" />
           </button>
         </div>

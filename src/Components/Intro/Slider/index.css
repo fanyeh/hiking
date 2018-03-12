@@ -4,18 +4,14 @@
   text-align: center;
 }
 
-.slider {
-  overflow: hidden;
-  height: 66vw;
+.transitionGroup {
+  position: relative;
+  height: inherit;
 }
 
-.slider img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
+.slider {
+  height: inherit;
+  position: relative;
 }
 
 .moreInfo {
@@ -33,3 +29,29 @@
   font-weight: 500;
   letter-spacing: 0.1em;
 }
+
+.enterLeft {
+  transform: translate(100%, 0);
+}
+
+.enterRight {
+  transform: translate(-100%, 0);
+}
+
+.enterActive {
+  transition: all 2000ms;
+  transform: translate(0, 0);
+}
+
+.exitActiveLeft {
+  transition: all 2000ms;
+  transform: translate(-100%, 0%);
+}
+.exitActiveRight {
+  transition: all 2000ms;
+  transform: translate(100%, 0%);
+}
+
+/* .exit {
+  transform: translate(-100%, 0%);
+} */
