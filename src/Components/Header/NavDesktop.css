@@ -1,41 +1,39 @@
 nav {
   position: relative;
+  perspective: 2000px;
 }
 
-.list {
+ul {
   padding: 0;
   white-space: nowrap;
-  height: 100%;
   margin: 0;
 }
 
-.list li {
+li {
   list-style-type: none;
   position: relative;
   display: inline-block;
 }
 
-li > div {
-  padding: 1em 1.5em;
-}
-
-.list li:hover {
+li:hover {
   color: rgb(203, 189, 154);
 }
-
-.list {
-  display: inline-block;
+.navItem {
+  padding: 1em 1.5em;
 }
 
 .menuBackground {
   position: absolute;
   background-color: white;
-  border-radius: 5px;
-  opacity: 0;
-  /* display: none; */
+  height: 20px;
+  border-radius: 4px;
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15),
+    0 5px 15px rgba(0, 0, 0, 0.1);
+  transform-origin: 50% 0;
+  transform: rotateX(-90deg);
 }
 
-.menuBackground::after {
+.menuBackground::before {
   content: '';
   position: absolute;
   height: 20px;
@@ -44,4 +42,10 @@ li > div {
   transform: translateX(-50%) rotate(45deg);
   top: -5px;
   background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    visibility: hidden;
+  }
 }

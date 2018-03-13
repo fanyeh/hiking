@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Menu from './Menu';
-import style from './NavBar.css';
+import MenuItem from './MenuItem';
+import style from './NavDesktop.css';
 import Transition from 'react-transition-group/Transition';
 
-class NavBar extends Component {
+class NavDesktop extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,7 +27,7 @@ class NavBar extends Component {
 
   hideMenu(e) {
     clearTimeout(this.timeoutID);
-    if (e.relatedTarget.className !== 'navItem') {
+    if (!e.relatedTarget.className.includes('navItem')) {
       this.setState({
         showMenuID: -1,
         fromNavItem: null,
@@ -58,54 +58,52 @@ class NavBar extends Component {
   updateTransitionStyle(coords) {
     const duration = 200;
     const { fromNavItem } = this.state;
-
     const defaultStyle = {
       entered: {
         opacity: 1,
-        transition: `opacity ${duration}ms,width ${duration}ms, height ${duration}ms, left ${duration}ms`,
+        transform: 'rotateX(0deg)',
+        transition: `opacity ${duration}ms,width ${duration}ms, height ${duration}ms, left ${duration}ms, transform ${duration *
+          0.75}ms`,
         ...coords,
       },
       exiting: {
         opacity: 1,
+        transform: 'rotateX(0deg)',
         ...coords,
       },
 
       exited: {
         opacity: 0,
-        transition: `opacity ${duration}ms`,
+        transition: `opacity ${duration}ms , transform ${duration * 0.75}ms`,
         ...coords,
       },
     };
 
-    let transitionStyle;
+    let entering;
     if (!fromNavItem) {
-      transitionStyle = {
-        entering: {
-          top: coords.top,
-          left: coords.left,
-          opacity: 0,
-        },
-        ...defaultStyle,
+      entering = {
+        top: coords.top,
+        left: coords.left,
+        opacity: 0,
       };
     } else {
-      transitionStyle = {
-        entering: {
-          top: fromNavItem.top,
-          left: fromNavItem.left,
-          width: fromNavItem.width,
-          height: fromNavItem.heigth,
-          opacity: 1,
-        },
-        ...defaultStyle,
+      entering = {
+        top: fromNavItem.top,
+        left: fromNavItem.left,
+        width: fromNavItem.width,
+        height: fromNavItem.heigth,
+        opacity: 1,
       };
     }
+    const transitionStyle = {
+      entering,
+      ...defaultStyle,
+    };
     return transitionStyle;
   }
 
   render() {
-    const showMenuID = this.state.showMenuID;
-    const transitionStyle = this.state.transitionStyle;
-    const navItems = this.state.navItems;
+    const { showMenuID, transitionStyle, navItems } = this.state;
     return (
       <nav ref="navigation">
         <Transition in={showMenuID > -1} timeout={0}>
@@ -117,7 +115,7 @@ class NavBar extends Component {
             />
           )}
         </Transition>
-        <ul className={style.list}>
+        <ul>
           {navItems.map((item, i) => {
             return (
               <li
@@ -126,8 +124,10 @@ class NavBar extends Component {
                 onMouseEnter={e => this.showMenu(e)}
                 onMouseLeave={e => this.hideMenu(e)}
               >
-                <div className="navItem">{item}</div>
-                {showMenuID === i && <Menu onMounted={menu => this.updateMenuBackground(menu)} />}
+                <div className={style.navItem}>{item}</div>
+                {showMenuID === i && (
+                  <MenuItem onMounted={menu => this.updateMenuBackground(menu)} desktop={true} />
+                )}
               </li>
             );
           })}
@@ -137,4 +137,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default NavDesktop;

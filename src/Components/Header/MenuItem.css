@@ -1,0 +1,23 @@
+.container {
+  color: grey;
+  -webkit-font-smoothing: antialiased;
+}
+
+.desktop {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.item {
+  padding: 0.5em 1.25em;
+  text-align: left;
+}
+
+.item:first-of-type {
+  padding-top: 1em;
+}
+
+.item:last-of-type {
+  padding-bottom: 1em;
+}

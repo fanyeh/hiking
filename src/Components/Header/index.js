@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import NavBar from './NavBar';
+import NavDesktop from './NavDesktop';
+import NavMobile from './NavMobile';
 import style from './index.css';
 
 class Header extends Component {
@@ -7,10 +8,10 @@ class Header extends Component {
     return (
       <header>
         <div className={style.logo}>Logo</div>
-        <NavBar />
-        <div className={style.menuIcon}>
-          <i className="fas fa-bars fa-2x" />
-        </div>
+        <NavDesktop />
+        <NavMobile
+          navItems={['Home', 'Pages', 'Treks', 'Gallery', 'Blog', 'Elements', 'Contact']}
+        />
       </header>
     );
   }

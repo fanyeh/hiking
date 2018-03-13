@@ -1,0 +1,29 @@
+.menu {
+  position: absolute;
+  width: 100vw;
+  background-color: white;
+  right: -20px;
+  top: 40px;
+  color: black;
+  text-align: left;
+}
+
+.icon {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.menuItem {
+  padding: 0.5em 0;
+  padding-left: 1em;
+}
+
+@media screen and (max-width: 768px) {
+  .icon {
+    display: block;
+  }
+}
