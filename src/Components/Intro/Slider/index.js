@@ -37,7 +37,6 @@ class Slider extends Component {
   }
 
   render() {
-    console.log(this.transitionStyle);
     const currentImage = this.state.currentImage;
     return (
       <div className={style.slider}>
@@ -50,7 +49,9 @@ class Slider extends Component {
             })
           }
         >
-          <CSSTransition key={currentImage.props.sourceID}>{currentImage}</CSSTransition>
+          <CSSTransition timeout={2000} key={currentImage.props.sourceID}>
+            {currentImage}
+          </CSSTransition>
         </TransitionGroup>
         <SliderController onClick={direction => this.slide(direction)}>
           <div className={style.info}>
