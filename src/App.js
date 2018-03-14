@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Components/Header';
 import Intro from './Components/Intro';
 import About from './Components/About';
+import Blog from './Components/Blog';
 import '@css/normalize.css';
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
         <Header />
         <Intro />
         <About />
+        <Blog />
       </div>
     );
   }
