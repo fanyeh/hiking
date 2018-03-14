@@ -1,0 +1,21 @@
+.itemContainer {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.itemContainer li {
+  display: block;
+}
+
+.bottom {
+  border-top: 1px solid black;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1em;
+  /* margin-bottom: 1em; */
+}
+
+.footer {
+  text-align: center;
+}
