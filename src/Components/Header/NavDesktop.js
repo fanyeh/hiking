@@ -27,7 +27,7 @@ class NavDesktop extends Component {
 
   hideMenu(e) {
     clearTimeout(this.timeoutID);
-    if (!e.relatedTarget.className.includes('navItem')) {
+    if (e.relatedTarget === window || !e.relatedTarget.className.includes('navItem')) {
       this.setState({
         showMenuID: -1,
         fromNavItem: null,
