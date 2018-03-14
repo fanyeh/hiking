@@ -1,4 +1,4 @@
-.menu {
+.navigation {
   position: absolute;
   width: 100vw;
   background-color: white;
@@ -8,7 +8,7 @@
   text-align: left;
 }
 
-.icon {
+.navMobile {
   display: inline-block;
   position: absolute;
   right: 20px;
@@ -17,13 +17,13 @@
   display: none;
 }
 
-.menuItem {
+.navItem {
   padding: 0.5em 0;
   padding-left: 1em;
 }
 
 @media screen and (max-width: 768px) {
-  .icon {
+  .navMobile {
     display: block;
   }
 }

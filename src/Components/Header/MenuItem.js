@@ -6,8 +6,8 @@ class MenuItem extends Component {
   constructor(props) {
     super(props);
     const defaultStyle = this.props.desktop
-      ? `${style.container} ${style.desktop}`
-      : `${style.container}`;
+      ? `${style.menuItem} ${style.desktop}`
+      : `${style.menuItem}`;
     this.state = {
       transitionStyles: {
         entering: { opacity: 0 },

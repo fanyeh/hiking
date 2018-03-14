@@ -14,7 +14,6 @@ class NavDesktop extends Component {
         exiting: {},
         exited: {},
       },
-      navItems: ['Home', 'Pages', 'Treks', 'Gallery', 'Blog', 'Elements', 'Contact'],
     };
   }
 
@@ -103,9 +102,10 @@ class NavDesktop extends Component {
   }
 
   render() {
-    const { showMenuID, transitionStyle, navItems } = this.state;
+    const { showMenuID, transitionStyle } = this.state;
+    const { navItems } = this.props;
     return (
-      <nav ref="navigation">
+      <nav ref="navigation" className={style.navigation}>
         <Transition in={showMenuID > -1} timeout={0}>
           {state => (
             <div
@@ -115,7 +115,7 @@ class NavDesktop extends Component {
             />
           )}
         </Transition>
-        <ul>
+        <ul className={style.navList}>
           {navItems.map((item, i) => {
             return (
               <li
@@ -123,8 +123,9 @@ class NavDesktop extends Component {
                 id={i}
                 onMouseEnter={e => this.showMenu(e)}
                 onMouseLeave={e => this.hideMenu(e)}
+                className={style.navItem}
               >
-                <div className={style.navItem}>{item}</div>
+                <div className={style.navItemName}>{item}</div>
                 {showMenuID === i && (
                   <MenuItem onMounted={menu => this.updateMenuBackground(menu)} desktop={true} />
                 )}

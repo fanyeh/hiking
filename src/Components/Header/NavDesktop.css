@@ -1,25 +1,27 @@
-nav {
+.navigation {
   position: relative;
   perspective: 2000px;
 }
 
-ul {
+.navList {
   padding: 0;
   white-space: nowrap;
   margin: 0;
 }
 
-li {
+.navItem {
   list-style-type: none;
   position: relative;
   display: inline-block;
 }
 
-li:hover {
+.navItem:hover {
   color: rgb(203, 189, 154);
 }
-.navItem {
+
+.navItemName {
   padding: 1em 1.5em;
+  /* composes: f6 from '@css/typeScale.css'; */
 }
 
 .menuBackground {
