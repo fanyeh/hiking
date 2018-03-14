@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import Header from './Components/Header';
 import Intro from './Components/Intro';
-<<<<<<< HEAD
+import About from './Components/About';
 import '@css/normalize.css';
 
-=======
-import About from './Components/About';
->>>>>>> feature/about
 class App extends Component {
   render() {
     return (
