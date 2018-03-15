@@ -4,9 +4,11 @@ class About extends Component {
   render() {
     return (
       <div className={style.container}>
-        <h1>ABOUT US</h1>
-        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
-        <p>
+        <h1 className={style.header}>ABOUT US</h1>
+        <span className={style.description}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit
+        </span>
+        <p className={style.detail}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic reprehenderit eligendi dolor
           incidunt natus commodi doloribus culpa ad iusto suscipit dolores, ex obcaecati molestias,
           nulla consectetur dolore quas adipisci similique eaque provident. Nostrum, officiis cum
@@ -17,7 +19,7 @@ class About extends Component {
         <div className={style.services}>
           <div className={style.serviceItem}>
             <div>Icon</div>
-            <h2>In Every Conditions</h2>
+            <h3>In Every Conditions</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur
               sapiente error, voluptas fuga, laudantium ullam magni fugit. Qui!
@@ -26,7 +28,7 @@ class About extends Component {
 
           <div className={style.serviceItem}>
             <div>Icon</div>
-            <h2>Professional Team</h2>
+            <h3>Professional Team</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur
               sapiente error, voluptas fuga, laudantium ullam magni fugit. Qui!
@@ -34,7 +36,7 @@ class About extends Component {
           </div>
           <div className={style.serviceItem}>
             <div>Icon</div>
-            <h2>Expert hikers</h2>
+            <h3>Expert hikers</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur
               sapiente error, voluptas fuga, laudantium ullam magni fugit. Qui!
@@ -44,6 +46,42 @@ class About extends Component {
         {/* Show treks */}
         <div>
           <div className={style.imageContainer}>
+            <div className={style.imageWrapper}>
+              <img src={require('../../frontpage0.jpg')} alt="" />
+            </div>
+
+            <div className={style.imageWrapper}>
+              <img src={require('../../frontpage0.jpg')} alt="" />
+            </div>
+
+            <div className={style.imageWrapper}>
+              <img src={require('../../frontpage0.jpg')} alt="" />
+            </div>
+
+            <div className={style.imageWrapper}>
+              <img src={require('../../frontpage0.jpg')} alt="" />
+            </div>
+
+            <div className={style.imageWrapper}>
+              <img src={require('../../frontpage0.jpg')} alt="" />
+            </div>
+
+            <div className={style.imageWrapper}>
+              <img src={require('../../frontpage0.jpg')} alt="" />
+            </div>
+
+            <div className={style.imageWrapper}>
+              <img src={require('../../frontpage0.jpg')} alt="" />
+            </div>
+
+            <div className={style.imageWrapper}>
+              <img src={require('../../frontpage0.jpg')} alt="" />
+            </div>
+
+            <div className={style.imageWrapper}>
+              <img src={require('../../frontpage0.jpg')} alt="" />
+            </div>
+
             <div className={style.imageWrapper}>
               <img src={require('../../frontpage0.jpg')} alt="" />
             </div>

@@ -55,14 +55,12 @@ class Slider extends Component {
         </TransitionGroup>
         <SliderController onClick={direction => this.slide(direction)}>
           <div className={style.info}>
-            <h1>Wild nature safe adventure</h1>
-            <p>
+            <h1 className={style.header}>Wild nature safe adventure</h1>
+            <p className={style.description}>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate aliquam
               aspernatur architecto tempora ipsum deleniti,
             </p>
-            <div className={style.moreInfo}>
-              <button>More Info</button>
-            </div>
+            <button className={style.moreInfo}>More Info</button>
           </div>
         </SliderController>
       </div>

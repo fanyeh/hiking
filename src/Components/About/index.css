@@ -1,11 +1,44 @@
 .imageContainer {
-  width: 100vw;
+  width: 100%;
+  padding: 3em 0;
+  overflow: hidden;
+  white-space: nowrap;
+  /* display: inline-block; */
 }
 
 .imageWrapper {
   overflow: hidden;
   width: 50%;
   height: 50vw;
+  display: inline-block;
+  /* float: left; */
+}
+
+.imageWrapper:nth-of-type(n + 2) {
+  padding-left: 1.5em;
+}
+
+.container {
+  padding-top: 40px;
+}
+
+.header {
+  font-weight: 700;
+  margin: 0.5em;
+}
+
+.description {
+  composes: article from '@css/typography.css';
+  font-style: italic;
+  letter-spacing: 0.1em;
+}
+
+.detail {
+  composes: article from '@css/typography.css';
+  line-height: 1.75em;
+  text-align: justify;
+  width: 50%;
+  margin: 3em auto;
 }
 
 .imageContainer img {
@@ -21,13 +54,21 @@
 }
 
 .services {
-  background-color: grey;
+  composes: article from '@css/typography.css';
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  line-height: 1.75em;
+  /* padding: 2em 0; */
 }
 
 .serviceItem {
-  margin: 0 auto;
+  /* margin: 0 auto; */
+}
+
+.serviceItem h3 {
+  color: black;
 }
 
 @media screen and (min-width: 768px) {
@@ -49,13 +90,14 @@
   }
 
   .serviceItem {
-    flex-basis: 33%;
+    flex-basis: 300px;
+    padding: 3em;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .imageWrapper {
-    width: calc(100vw / 8);
-    height: calc(100vw / 8);
+    width: calc((100vw - 11.5em) / 8);
+    height: calc((100vw - 11.5em) / 8);
   }
 }

@@ -2,6 +2,22 @@
   margin: 0 auto;
   position: relative;
   text-align: center;
+  width: 70%;
+}
+
+.header {
+  font-weight: 900;
+  composes: f-headline from '@css/typeScale.css';
+  font-family: 'sans-serif';
+  margin: 0;
+}
+
+.description {
+  font-family: 'Lato', 'sans-serif';
+  font-weight: 100;
+  padding: 3em 0;
+  margin: 0;
+  letter-spacing: 0.1em;
 }
 
 .transitionGroup {
@@ -16,18 +32,14 @@
 
 .moreInfo {
   display: inline-block;
-  margin-bottom: 20px;
 }
 
-.moreInfo button {
+button.moreInfo {
   padding: 0.75em 2em;
   border-radius: 3px;
   background-color: rgb(204, 190, 156);
   color: white;
-  font-size: 0.5em;
   border-color: rgb(204, 190, 156);
-  font-weight: 500;
-  letter-spacing: 0.1em;
 }
 
 .enterLeft {
