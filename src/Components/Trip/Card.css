@@ -1,0 +1,18 @@
+.container {
+  width: 25vw;
+  height: 30vw;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 500ms, box-shadow 500ms;
+  margin: 1em;
+}
+
+.image {
+  width: 100%;
+  height: 50%;
+  background: grey;
+}
+
+.container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.5);
+}
