@@ -1,5 +1,5 @@
 .menuItem {
-  color: grey;
+  composes: secondaryFont from '@css/typography.css';
   -webkit-font-smoothing: antialiased;
 }
 

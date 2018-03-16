@@ -5,8 +5,19 @@
   color: white;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 999;
+  transition: all 500ms;
+  transition-delay: 200ms;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.change {
+  color: black;
+  background-color: white;
+  transition: all 500ms;
+  transition-delay: 200ms;
+}
+
 .logo {
   display: inline-block;
   position: absolute;

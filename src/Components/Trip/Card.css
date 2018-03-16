@@ -1,9 +1,55 @@
-.container {
+@value secondary , primary from  "@css/colors.css";
+
+.tripCard {
   width: 25vw;
   height: 30vw;
   box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.2);
   transition: transform 500ms, box-shadow 500ms;
   margin: 1em;
+  text-align: center;
+}
+
+.name {
+  margin: 0 3em;
+  padding: 1.5em 0;
+  border-top: 1px solid secondary;
+  border-bottom: 1px solid secondary;
+}
+
+.description {
+  padding: 5% 0;
+}
+
+.description div {
+  display: inline-block;
+  padding: 0 1.5em;
+}
+
+.description h3 {
+  color: primary;
+  margin: 0.5em;
+}
+
+.unit {
+  composes: article from '@css/typography.css';
+  font-size: 0.9em;
+}
+
+.location {
+  margin-top: 1em;
+  composes: article from '@css/typography.css';
+}
+.location span {
+  display: block;
+}
+
+.site {
+  color: black;
+}
+
+.country {
+  font-size: 0.9em;
+  padding: 1em 0;
 }
 
 .image {

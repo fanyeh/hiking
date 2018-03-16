@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Header from './Components/Header';
-import Intro from './Components/Intro';
-import About from './Components/About';
-import Blog from './Components/Blog';
-import Footer from './Components/Footer';
-import Team from './Components/Team';
-import Trip from './Components/Trip';
+import Header from '@components/Header';
+import Intro from '@components/Intro';
+import About from '@components/About';
+import Blog from '@components/Blog';
+import Footer from '@components/Footer';
+import Team from '@components/Team';
+import Trip from '@components/Trip';
 import '@css/normalize.css';
 
 class App extends Component {

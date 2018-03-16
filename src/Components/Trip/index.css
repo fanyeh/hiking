@@ -2,3 +2,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+.trip {
+  background-color: #f6f6f6;
+  padding-bottom: 40px;
+}

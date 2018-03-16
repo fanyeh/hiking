@@ -4,17 +4,26 @@ import style from './Card.css';
 class Card extends Component {
   render() {
     return (
-      <div className={style.container}>
+      <div className={style.tripCard}>
         <div className={style.image} />
         <div className={style.description}>
-          <div className={style.days}>8</div>
-          <div className={style.groupSize}>10</div>
-          <div className={style.difficulty}>High</div>
+          <div className={style.days}>
+            <h3>8</h3>
+            <span className={style.unit}>Days</span>
+          </div>
+          <div className={style.groupSize}>
+            <h3>10</h3>
+            <span className={style.unit}>Max Group Size</span>
+          </div>
+          <div className={style.difficulty}>
+            <h3>High</h3>
+            <span className={style.unit}>Difficulty</span>
+          </div>
         </div>
-        <h3>Trekking Expedition</h3>
+        <h3 className={style.name}>Trekking Expedition</h3>
         <div className={style.location}>
-          <span>Everest Base Camp</span>
-          <span>Ama Dablam , Nepal</span>
+          <span className={style.site}>Everest Base Camp</span>
+          <span className={style.country}>Ama Dablam , Nepal</span>
         </div>
       </div>
     );

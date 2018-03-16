@@ -1,6 +1,15 @@
 .member {
-  /* flex-basis: 300px; */
   margin: 1em;
+  text-align: center;
+}
+
+.name {
+  margin: 0.75em;
+  margin-top: 2em;
+}
+
+.location {
+  composes: article from '@css/typography.css';
 }
 
 .imageContainer {

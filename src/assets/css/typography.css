@@ -1,5 +1,31 @@
-.article {
+.secondaryFont {
   font-family: 'Lato', sans-serif;
   color: grey;
+}
+
+.article {
+  composes: secondaryFont;
   font-weight: 100;
+  font-size: 1.05em;
+}
+
+.footerFont {
+  font-family: 'Lato', sans-serif;
+  color: grey;
+}
+
+.caption {
+  composes: article;
+  letter-spacing: 0.05em;
+}
+
+.headline {
+  font-weight: 900;
+  font-size: 6em;
+  letter-spacing: 4px;
+}
+
+.navItemTitle {
+  font-weight: 700;
+  letter-spacing: 2px;
 }

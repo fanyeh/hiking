@@ -1,3 +1,8 @@
-.container {
-  margin: 1em;
+.footerItem {
+  margin: 1em 2em;
+}
+
+.list {
+  padding: 0;
+  composes: footerFont from '@css/typography.css';
 }

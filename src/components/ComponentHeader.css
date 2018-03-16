@@ -1,0 +1,15 @@
+.container {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  margin: 0.5em;
+}
+
+.description {
+  composes: article from '@css/typography.css';
+  font-style: italic;
+  letter-spacing: 0.05em;
+}

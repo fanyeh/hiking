@@ -88,6 +88,7 @@ module.exports = {
 
       // Path alias for src
       '@css': path.resolve(__dirname, '../src/assets/css'),
+      '@components': path.resolve(__dirname, '../src/components'),
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).

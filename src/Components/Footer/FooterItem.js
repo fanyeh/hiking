@@ -4,9 +4,9 @@ class FooterItem extends Component {
   render() {
     const { title, children } = this.props;
     return (
-      <div className={style.container}>
+      <div className={style.footerItem}>
         <h3>{title}</h3>
-        <ul>{children}</ul>
+        <ul className={style.list}>{children}</ul>
       </div>
     );
   }

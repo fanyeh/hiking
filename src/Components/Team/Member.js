@@ -15,6 +15,7 @@ class Member extends Component {
   }
   render() {
     const { isToggleSocial } = this.state;
+    const { name, location } = this.props;
     return (
       <div className={style.member}>
         <div
@@ -28,8 +29,8 @@ class Member extends Component {
           />
           <Social toggle={isToggleSocial} />
         </div>
-        <h4>Name</h4>
-        <span>location</span>
+        <h4 className={style.name}>{name}</h4>
+        <span className={style.location}>{location}</span>
       </div>
     );
   }

@@ -2,3 +2,8 @@
   display: flex;
   justify-content: center;
 }
+
+.blog {
+  background-color: #f6f6f6;
+  padding-bottom: 40px;
+}

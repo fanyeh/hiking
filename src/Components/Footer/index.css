@@ -1,3 +1,5 @@
+@value primary from '@css/colors.css';
+
 .itemContainer {
   display: flex;
   justify-content: center;
@@ -6,16 +8,38 @@
 
 .itemContainer li {
   display: block;
+  margin: 0;
+  padding: 0.2em 0;
 }
 
 .bottom {
-  border-top: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: inline-block;
   margin: 0 auto;
-  padding: 1em;
-  /* margin-bottom: 1em; */
+  padding: 1.5em 1em 1em 1em;
 }
 
 .footer {
   text-align: center;
+  background-color: #444;
+  color: white;
+  padding: 40px 0;
+}
+
+.author {
+  composes: article from '@css/typography.css';
+  color: white;
+  padding-right: 200px;
+}
+
+.author i {
+  padding: 0 0.5em;
+}
+
+.social i {
+  background-color: primary;
+  color: white;
+  border-radius: 50%;
+  padding: 0.4em;
+  margin: 0 0.5em;
 }

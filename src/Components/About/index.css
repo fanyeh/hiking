@@ -1,9 +1,11 @@
+.about {
+  text-align: center;
+}
 .imageContainer {
   width: 100%;
-  padding: 3em 0;
+  padding: 40px 0;
   overflow: hidden;
   white-space: nowrap;
-  /* display: inline-block; */
 }
 
 .imageWrapper {
@@ -11,26 +13,10 @@
   width: 50%;
   height: 50vw;
   display: inline-block;
-  /* float: left; */
 }
 
 .imageWrapper:nth-of-type(n + 2) {
   padding-left: 1.5em;
-}
-
-.container {
-  padding-top: 40px;
-}
-
-.header {
-  font-weight: 700;
-  margin: 0.5em;
-}
-
-.description {
-  composes: article from '@css/typography.css';
-  font-style: italic;
-  letter-spacing: 0.1em;
 }
 
 .detail {
@@ -38,7 +24,8 @@
   line-height: 1.75em;
   text-align: justify;
   width: 50%;
-  margin: 3em auto;
+  margin: 1em auto;
+  margin-bottom: 4em;
 }
 
 .imageContainer img {
@@ -49,10 +36,6 @@
   transform: scale(1.1);
 }
 
-.container {
-  text-align: center;
-}
-
 .services {
   composes: article from '@css/typography.css';
   background-color: #f6f6f6;
@@ -60,7 +43,6 @@
   flex-direction: column;
   justify-content: center;
   line-height: 1.75em;
-  /* padding: 2em 0; */
 }
 
 .serviceItem {

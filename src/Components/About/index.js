@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import ComponentHeader from '@components/ComponentHeader';
 import style from './index.css';
 class About extends Component {
   render() {
     return (
-      <div className={style.container}>
-        <h1 className={style.header}>ABOUT US</h1>
-        <span className={style.description}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit
-        </span>
+      <div className={style.about}>
+        <ComponentHeader
+          title="ABOUT US"
+          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
+        />
+
         <p className={style.detail}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic reprehenderit eligendi dolor
           incidunt natus commodi doloribus culpa ad iusto suscipit dolores, ex obcaecati molestias,
@@ -18,7 +20,9 @@ class About extends Component {
         {/* Services */}
         <div className={style.services}>
           <div className={style.serviceItem}>
-            <div>Icon</div>
+            <div>
+              <i className="fas fa-cloud" />
+            </div>
             <h3>In Every Conditions</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur
@@ -44,47 +48,45 @@ class About extends Component {
           </div>
         </div>
         {/* Show treks */}
-        <div>
-          <div className={style.imageContainer}>
-            <div className={style.imageWrapper}>
-              <img src={require('../../frontpage0.jpg')} alt="" />
-            </div>
+        <div className={style.imageContainer}>
+          <div className={style.imageWrapper}>
+            <img src={require('../../frontpage0.jpg')} alt="" />
+          </div>
 
-            <div className={style.imageWrapper}>
-              <img src={require('../../frontpage0.jpg')} alt="" />
-            </div>
+          <div className={style.imageWrapper}>
+            <img src={require('../../frontpage0.jpg')} alt="" />
+          </div>
 
-            <div className={style.imageWrapper}>
-              <img src={require('../../frontpage0.jpg')} alt="" />
-            </div>
+          <div className={style.imageWrapper}>
+            <img src={require('../../frontpage0.jpg')} alt="" />
+          </div>
 
-            <div className={style.imageWrapper}>
-              <img src={require('../../frontpage0.jpg')} alt="" />
-            </div>
+          <div className={style.imageWrapper}>
+            <img src={require('../../frontpage0.jpg')} alt="" />
+          </div>
 
-            <div className={style.imageWrapper}>
-              <img src={require('../../frontpage0.jpg')} alt="" />
-            </div>
+          <div className={style.imageWrapper}>
+            <img src={require('../../frontpage0.jpg')} alt="" />
+          </div>
 
-            <div className={style.imageWrapper}>
-              <img src={require('../../frontpage0.jpg')} alt="" />
-            </div>
+          <div className={style.imageWrapper}>
+            <img src={require('../../frontpage0.jpg')} alt="" />
+          </div>
 
-            <div className={style.imageWrapper}>
-              <img src={require('../../frontpage0.jpg')} alt="" />
-            </div>
+          <div className={style.imageWrapper}>
+            <img src={require('../../frontpage0.jpg')} alt="" />
+          </div>
 
-            <div className={style.imageWrapper}>
-              <img src={require('../../frontpage0.jpg')} alt="" />
-            </div>
+          <div className={style.imageWrapper}>
+            <img src={require('../../frontpage0.jpg')} alt="" />
+          </div>
 
-            <div className={style.imageWrapper}>
-              <img src={require('../../frontpage0.jpg')} alt="" />
-            </div>
+          <div className={style.imageWrapper}>
+            <img src={require('../../frontpage0.jpg')} alt="" />
+          </div>
 
-            <div className={style.imageWrapper}>
-              <img src={require('../../frontpage0.jpg')} alt="" />
-            </div>
+          <div className={style.imageWrapper}>
+            <img src={require('../../frontpage0.jpg')} alt="" />
           </div>
         </div>
       </div>
