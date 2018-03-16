@@ -9,11 +9,6 @@
   font-size: 1.05em;
 }
 
-.footerFont {
-  font-family: 'Lato', sans-serif;
-  color: grey;
-}
-
 .caption {
   composes: article;
   letter-spacing: 0.05em;

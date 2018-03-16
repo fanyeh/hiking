@@ -8,6 +8,10 @@
   margin: 1em;
   text-align: center;
 }
+.tripCard:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.5);
+}
 
 .name {
   margin: 0 3em;
@@ -56,9 +60,4 @@
   width: 100%;
   height: 50%;
   background: grey;
-}
-
-.container:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.5);
 }

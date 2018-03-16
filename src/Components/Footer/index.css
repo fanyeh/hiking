@@ -28,8 +28,12 @@
 
 .author {
   composes: article from '@css/typography.css';
+  padding-right: 900px;
+}
+
+.author .name {
   color: white;
-  padding-right: 200px;
+  padding: 0 0.25em;
 }
 
 .author i {

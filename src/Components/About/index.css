@@ -53,6 +53,10 @@
   color: black;
 }
 
+.icon {
+  width: 50px;
+}
+
 @media screen and (min-width: 768px) {
   .imageWrapper {
     width: calc(100vw / 5);

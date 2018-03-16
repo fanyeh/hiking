@@ -29,11 +29,56 @@ class Footer extends Component {
             <li>Saturday from 9.00 am to 12.00 pm</li>
             <li>322 Moon St, Venice Italy, 1231</li>
           </FooterItem>
+
+          <FooterItem title="Attribution">
+            <li>
+              Below icons are from{' '}
+              <a href="https://www.flaticon.com/" title="Flaticon">
+                www.flaticon.com
+              </a>
+              and licensed by{' '}
+              <a
+                href="http://creativecommons.org/licenses/by/3.0/"
+                title="Creative Commons BY 3.0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CC 3.0 BY
+              </a>
+              <ul>
+                <li>
+                  <img src={require('@img/cloud.svg')} alt="" />
+                  made by{' '}
+                  <a href="http://www.freepik.com" title="Freepik">
+                    Freepik
+                  </a>
+                </li>
+                <li>
+                  <img src={require('@img/backpack.svg')} alt="" />
+                  made by{' '}
+                  <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">
+                    Good Ware
+                  </a>
+                </li>
+                <li>
+                  <img src={require('@img/knife.svg')} alt="" />
+                  made by{' '}
+                  <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">
+                    Smashicons
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              All photos are from <a href="https://unsplash.com/">Unsplash</a>
+            </li>
+          </FooterItem>
         </div>
 
         <div className={style.bottom}>
           <span className={style.author}>
-            Made by Jack Yeh with <i className="fab fa-react" style={{ color: '#53C1DE' }} /> +{' '}
+            Made by <span className={style.name}>Jack Yeh</span> with{' '}
+            <i className="fab fa-react" style={{ color: '#53C1DE' }} /> +{' '}
             <i className="fas fa-heart" style={{ color: '#E7040F' }} />
           </span>
           <span className={style.social}>

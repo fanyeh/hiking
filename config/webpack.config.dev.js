@@ -88,6 +88,7 @@ module.exports = {
 
       // Path alias for src
       '@css': path.resolve(__dirname, '../src/assets/css'),
+      '@img': path.resolve(__dirname, '../src/assets/images'),
       '@components': path.resolve(__dirname, '../src/components'),
     },
     plugins: [

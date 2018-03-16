@@ -21,7 +21,7 @@ class About extends Component {
         <div className={style.services}>
           <div className={style.serviceItem}>
             <div>
-              <i className="fas fa-cloud" />
+              <img src={require('@img/cloud.svg')} className={style.icon} alt="" />
             </div>
             <h3>In Every Conditions</h3>
             <p>
@@ -31,7 +31,9 @@ class About extends Component {
           </div>
 
           <div className={style.serviceItem}>
-            <div>Icon</div>
+            <div>
+              <img src={require('@img/backpack.svg')} className={style.icon} alt="" />
+            </div>
             <h3>Professional Team</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur
@@ -39,7 +41,9 @@ class About extends Component {
             </p>
           </div>
           <div className={style.serviceItem}>
-            <div>Icon</div>
+            <div>
+              <img src={require('@img/knife.svg')} className={style.icon} alt="" />
+            </div>
             <h3>Expert hikers</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur

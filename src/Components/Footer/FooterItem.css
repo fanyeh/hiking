@@ -3,6 +3,26 @@
 }
 
 .list {
+  position: relative;
   padding: 0;
-  composes: footerFont from '@css/typography.css';
+  line-height: 22px;
+  composes: secondaryFont from '@css/typography.css';
+  /* font-weight: 100; */
+}
+
+.list li {
+  position: relative;
+}
+
+.footerItem img {
+  width: 24px;
+  display: inline-block;
+  position: absolute;
+  left: -32px;
+  fill: grey;
+}
+
+.footerItem a {
+  color: lightgrey;
+  padding: 0 0.5em;
 }
