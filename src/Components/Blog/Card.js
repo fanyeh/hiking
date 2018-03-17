@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 import style from './Card.css';
 class Card extends Component {
   render() {
+    const { imageSource } = this.props;
     return (
       <div className={style.container}>
-        <div className={style.image} />
+        <div className={style.imageContainer}>
+          <div className={style.mask} />
+          <img className={style.image} src={imageSource} alt="" />
+        </div>
+
         <article className={style.content}>
           <h3>Adventure Time</h3>
           <time>02.11.2016</time>

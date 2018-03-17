@@ -6,15 +6,29 @@
   display: flex;
   align-items: center;
   color: white;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
-.left,
-.right {
+.arrow {
   flex-basis: 10%;
-  text-align: center;
+  /* text-align: center; */
+  transition: all 0.5s;
 }
 
+.arrow:last-of-type {
+  text-align: right;
+}
+
+.arrow:hover {
+  opacity: 0.4;
+}
+
+.container .arrow:first-of-type:hover {
+  transform: translateX(-5px);
+}
+.container .arrow:last-of-type:hover {
+  transform: translateX(5px);
+}
 .center {
   flex-basis: 60%;
 }

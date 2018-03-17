@@ -14,8 +14,8 @@ class Blog extends Component {
           description="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
         />
         <div className={style.cardContainer}>
-          <Card />
-          <Card />
+          <Card imageSource={require('@img/blog/blog1.jpg')} />
+          <Card imageSource={require('@img/blog/blog2.jpg')} />
         </div>
       </div>
     );

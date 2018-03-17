@@ -1,27 +1,40 @@
+@value primary from '@css/colors.css';
+
 .container {
   width: 23vw;
-  height: 18vw;
+  height: 16vw;
   display: flex;
   margin: 1em;
   box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.2);
 }
 
-.image {
-  flex-basis: 50%;
-  height: 100%;
-  background-color: grey;
-  background-position: center;
-  background-size: cover;
-  background-image: url('https://images.unsplash.com/photo-1414609864700-370eff277018?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d3f7c81dcbbfa0d813ad2868b1704193&auto=format&fit=crop&w=1500&q=80');
+.container:hover .content h3 {
+  color: primary;
 }
 
-.image:hover::after {
-  content: '';
-  display: block;
+.imageContainer {
+  flex-basis: 50%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.mask {
+  position: absolute;
   width: 100%;
   height: 100%;
+  transition: opacity 200ms;
+  opacity: 0;
+}
+
+.mask:hover {
   background-color: black;
-  opacity: 0.3;
+  opacity: 0.4;
+  z-index: 2;
+}
+
+.image {
+  width: 100%;
 }
 
 .content {
@@ -33,6 +46,7 @@
 
 .content h3 {
   color: black;
+  transition: color 200ms;
 }
 
 .content p {

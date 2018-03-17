@@ -27,6 +27,7 @@
 .slider {
   height: inherit;
   position: relative;
+  overflow: hidden;
 }
 
 .moreInfo {

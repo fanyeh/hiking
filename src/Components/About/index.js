@@ -3,6 +3,14 @@ import ComponentHeader from '@components/ComponentHeader';
 import style from './index.css';
 class About extends Component {
   render() {
+    let images = [];
+    for (let i = 1; i <= 8; i++) {
+      images.push(
+        <div key={i} className={style.imageWrapper}>
+          <img src={require(`@img/about/about${i}.jpg`)} alt="" />
+        </div>,
+      );
+    }
     return (
       <div className={style.about}>
         <ComponentHeader
@@ -52,47 +60,7 @@ class About extends Component {
           </div>
         </div>
         {/* Show treks */}
-        <div className={style.imageContainer}>
-          <div className={style.imageWrapper}>
-            <img src={require('../../frontpage0.jpg')} alt="" />
-          </div>
-
-          <div className={style.imageWrapper}>
-            <img src={require('../../frontpage0.jpg')} alt="" />
-          </div>
-
-          <div className={style.imageWrapper}>
-            <img src={require('../../frontpage0.jpg')} alt="" />
-          </div>
-
-          <div className={style.imageWrapper}>
-            <img src={require('../../frontpage0.jpg')} alt="" />
-          </div>
-
-          <div className={style.imageWrapper}>
-            <img src={require('../../frontpage0.jpg')} alt="" />
-          </div>
-
-          <div className={style.imageWrapper}>
-            <img src={require('../../frontpage0.jpg')} alt="" />
-          </div>
-
-          <div className={style.imageWrapper}>
-            <img src={require('../../frontpage0.jpg')} alt="" />
-          </div>
-
-          <div className={style.imageWrapper}>
-            <img src={require('../../frontpage0.jpg')} alt="" />
-          </div>
-
-          <div className={style.imageWrapper}>
-            <img src={require('../../frontpage0.jpg')} alt="" />
-          </div>
-
-          <div className={style.imageWrapper}>
-            <img src={require('../../frontpage0.jpg')} alt="" />
-          </div>
-        </div>
+        <div className={style.imageContainer}>{images}</div>
       </div>
     );
   }

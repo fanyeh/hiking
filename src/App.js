@@ -6,8 +6,6 @@ import Blog from '@components/Blog';
 import Footer from '@components/Footer';
 import Team from '@components/Team';
 import Trip from '@components/Trip';
-import '@css/normalize.css';
-
 class App extends Component {
   render() {
     return (

@@ -15,7 +15,7 @@ class Member extends Component {
   }
   render() {
     const { isToggleSocial } = this.state;
-    const { name, location } = this.props;
+    const { name, location, imageSource } = this.props;
     return (
       <div className={style.member}>
         <div
@@ -23,10 +23,7 @@ class Member extends Component {
           onMouseEnter={() => this.toggleSocial()}
           onMouseLeave={() => this.toggleSocial()}
         >
-          <img
-            src="https://images.unsplash.com/photo-1486210284477-e900ad8a6820?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c63ccb0d48159c15f7ca6e47bd0d8a0e&auto=format&fit=crop&w=1504&q=80"
-            alt=""
-          />
+          <img src={imageSource} alt="" />
           <Social toggle={isToggleSocial} />
         </div>
         <h4 className={style.name}>{name}</h4>

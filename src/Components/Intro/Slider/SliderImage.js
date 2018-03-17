@@ -6,7 +6,7 @@ class SliderImage extends Component {
     return (
       <div className={style.container}>
         <img
-          src={require(`../../../frontpage${this.props.sourceID % 2}.jpg`)}
+          src={require(`@img/intro/intro${this.props.sourceID % 4}.jpg`)}
           alt=""
           className={style.image}
         />

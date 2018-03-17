@@ -5,15 +5,15 @@ class SliderController extends Component {
   render() {
     return (
       <div className={style.container}>
-        <div className={style.left}>
+        <div className={style.arrow}>
           <button className={style.button} onClick={() => this.props.onClick('left')}>
-            <i className="fas fa-angle-left fa-2x" />
+            <i className="fas fa-angle-left fa-3x" />
           </button>
         </div>
         <div className={style.center}>{this.props.children}</div>
-        <div className={style.right}>
+        <div className={style.arrow}>
           <button className={style.button} onClick={() => this.props.onClick('right')}>
-            <i className="fas fa-angle-right fa-2x" />
+            <i className="fas fa-angle-right fa-3x" />
           </button>
         </div>
       </div>

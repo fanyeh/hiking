@@ -3,9 +3,12 @@ import style from './Card.css';
 
 class Card extends Component {
   render() {
+    const { imageSource } = this.props;
     return (
       <div className={style.tripCard}>
-        <div className={style.image} />
+        <div className={style.imageContainer}>
+          <img className={style.image} src={imageSource} alt="" />
+        </div>
         <div className={style.description}>
           <div className={style.days}>
             <h3>8</h3>
