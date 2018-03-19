@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FooterItem from './FooterItem';
+import FooterBottom from './FooterBottom';
 import style from './index.css';
 class Footer extends Component {
   render() {
@@ -74,20 +75,7 @@ class Footer extends Component {
             </li>
           </FooterItem>
         </div>
-
-        <div className={style.bottom}>
-          <span className={style.author}>
-            Made by <span className={style.name}>Jack Yeh</span> with{' '}
-            <i className="fab fa-react" style={{ color: '#53C1DE' }} /> +{' '}
-            <i className="fas fa-heart" style={{ color: '#E7040F' }} />
-          </span>
-          <span className={style.social}>
-            <i className="fab fa-twitter" />
-            <i className="fab fa-google-plus-g" />
-            <i className="fab fa-instagram" />
-            <i className="fab fa-youtube" />
-          </span>
-        </div>
+        <FooterBottom />
       </div>
     );
   }

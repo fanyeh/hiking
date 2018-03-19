@@ -1,0 +1,67 @@
+@value primary from '@css/colors.css';
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1em 0.5em 0.5em 0.5em;
+  margin: 0 auto;
+  margin-top: 1em;
+  width: 80%;
+  overflow: hidden;
+}
+
+.author {
+  composes: article from '@css/typography.css';
+  display: block;
+}
+
+.author .name {
+  color: white;
+  padding: 0 0.25em;
+}
+
+.author i {
+  padding: 0 0.5em;
+}
+
+.social {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.social i {
+  background-color: primary;
+  color: white;
+  border-radius: 50%;
+  padding: 0.4em;
+  margin: 0 0.5em;
+  font-size: 0.5em;
+}
+
+.social i:hover {
+  color: black;
+  background-color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .footerBottom {
+    padding: 1.5em 1em 1em 1em;
+    width: 80%;
+    position: relative;
+  }
+
+  .author {
+    float: left;
+  }
+
+  .social {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    margin: 0;
+    right: 1em;
+  }
+
+  .social i {
+    font-size: 1em;
+  }
+}

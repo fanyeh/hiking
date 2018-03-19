@@ -7,6 +7,7 @@
   padding: 20px 0;
   width: 100%;
 }
+
 .itemContainer {
   display: flex;
   justify-content: space-between;
@@ -22,46 +23,6 @@
   padding: 0.2em 0;
 }
 
-.bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1em 0.5em 0.5em 0.5em;
-  margin-top: 1em;
-}
-
-.author {
-  composes: article from '@css/typography.css';
-  display: inline-block;
-}
-
-.author .name {
-  color: white;
-  padding: 0 0.25em;
-}
-
-.author i {
-  padding: 0 0.5em;
-}
-
-.social {
-  display: inline-block;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.social i {
-  background-color: primary;
-  color: white;
-  border-radius: 50%;
-  padding: 0.4em;
-  margin: 0 0.5em;
-  font-size: 0.5em;
-}
-
-.social i:hover {
-  color: black;
-  background-color: white;
-}
-
 @media screen and (min-width: 768px) {
   .footer {
     padding: 40px 0;
@@ -70,35 +31,11 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-
-  .bottom {
-    padding: 1.5em 1em 1em 1em;
-  }
-
-  .author {
-    display: block;
-    margin-bottom: 2em;
-  }
-
-  .social {
-    display: inline;
-  }
-
-  .social i {
-    font-size: 1em;
-  }
 }
 
 @media screen and (min-width: 1280) {
   .itemContainer {
     justify-content: center;
-  }
-
-  .author {
-    padding-right: 40vw;
-    display: inline;
-  }
-  .itemContainer {
     width: 100%;
   }
 }
