@@ -82,23 +82,24 @@
 
   .mask {
     height: 100%;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
   .card {
     flex-direction: row;
     height: 40vw;
-    flex: 0 0 40vw;
     margin: 1em 0;
   }
 
   .imageWrapper {
-    flex: 0 0 50%;
+    /* flex: 0 0 45%; */
+    height: 100%;
   }
 
   .content {
-    padding: 0 2em;
-    box-sizing: border-box;
+    flex: 0 0 50%;
+    padding: 0 1.5em;
   }
   .image {
     height: 100%;
@@ -107,8 +108,13 @@
 }
 @media screen and (min-width: 1280px) {
   .card {
-    flex: 0 0 25vw;
+    flex: 0 0 30vw;
     height: 20vw;
     margin: 1em;
   }
+
+  /* .image {
+    height: auto;
+    width: auto;
+  } */
 }
