@@ -1,6 +1,6 @@
 @value primary from '@css/colors.css';
 
-.container {
+.card {
   width: 70%;
   height: 550px;
   display: flex;
@@ -9,11 +9,21 @@
   flex-direction: column;
 }
 
-.container:hover .content h3 {
+.card:hover .title {
   color: primary;
 }
 
-.imageContainer {
+.card:hover .mask {
+  background-color: black;
+  opacity: 0.3;
+  z-index: 2;
+}
+
+.card:hover .category {
+  color: black;
+}
+
+.imageWrapper {
   flex-basis: 80%;
   overflow: hidden;
   position: relative;
@@ -26,36 +36,45 @@
   opacity: 0;
 }
 
-.mask:hover {
-  background-color: black;
-  opacity: 0.4;
-  z-index: 2;
-}
-
 .image {
   width: 100%;
 }
 
+.category {
+  margin-top: 2em;
+  font-weight: 700;
+  color: primary;
+  transition: color 200ms;
+}
+
+.category div {
+  display: inline-block;
+  padding-right: 1em;
+}
+
 .content {
-  /* flex-basis: 50%; */
   composes: article from '@css/typography.css';
   padding: 0 2em;
   padding-bottom: 2em;
-  /* box-sizing: border-box; */
+  font-size: 1em;
 }
 
-.content h3 {
+.title {
   color: black;
   transition: color 200ms;
 }
 
-.content p {
-  margin-top: 0;
+.time {
+  text-decoration: underline;
+}
+
+.article {
+  margin-top: 0.5em;
   word-spacing: 0.25em;
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  .card {
     width: 35vw;
     margin: 1em;
   }
@@ -65,14 +84,14 @@
   }
 }
 @media screen and (min-width: 1028px) {
-  .container {
+  .card {
     width: 23vw;
     height: 16vw;
     margin: 1em;
     flex-direction: row;
   }
 
-  .imageContainer {
+  .imageWrapper {
     flex-basis: 50%;
     height: 100%;
   }
