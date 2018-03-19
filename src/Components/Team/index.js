@@ -11,7 +11,7 @@ class Team extends Component {
           title="OUT FABULOUS TEAM"
           description="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
         />
-        <div className={style.team}>
+        <div className={style.memberContainer}>
           <Member
             name="JOHN DOE"
             location="Cortina, Italy"

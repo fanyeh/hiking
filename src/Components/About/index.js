@@ -2,15 +2,49 @@ import React, { Component } from 'react';
 import ComponentHeader from '@components/ComponentHeader';
 import style from './index.css';
 class About extends Component {
-  render() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      images: this.createImages(),
+    };
+    this.updateImages = this.updateImages.bind(this);
+  }
+
+  componentWillMount() {
+    window.addEventListener('resize', this.updateImages);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateImages);
+  }
+
+  updateImages() {
+    this.setState({
+      images: this.createImages(),
+    });
+  }
+
+  createImages() {
     let images = [];
-    for (let i = 1; i <= 8; i++) {
+    const qty = this.calcImageQty();
+    for (let i = 1; i <= qty; i++) {
       images.push(
         <div key={i} className={style.imageWrapper}>
           <img src={require(`@img/about/about${i}.jpg`)} alt="" />
         </div>,
       );
     }
+    return images;
+  }
+
+  calcImageQty() {
+    const screenWidth = window.screen.availWidth;
+    let qty = screenWidth < 768 ? 2 : screenWidth < 1024 ? 5 : screenWidth < 1280 ? 6 : 8;
+    return qty;
+  }
+
+  render() {
+    const { images } = this.state;
     return (
       <div className={style.about}>
         <ComponentHeader

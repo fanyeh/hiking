@@ -25,16 +25,19 @@ class MenuItem extends Component {
 
   render() {
     const { defaultStyle, transitionStyles } = this.state;
+    const { children } = this.props;
     return (
       <div className={defaultStyle} ref="menuItem">
         <Transition timeout={0} appear={true} in={true}>
           {state => (
             <div style={{ ...transitionStyles[state] }}>
-              <div className={style.item}>menu-item1</div>
-              <div className={style.item}>menu-item2</div>
-              <div className={style.item}>menu-item3</div>
-              <div className={style.item}>menu-item4</div>
-              <div className={style.item}>menu-item5</div>
+              {children.map((item, index) => {
+                return (
+                  <div key={index} className={style.item}>
+                    {item}
+                  </div>
+                );
+              })}
             </div>
           )}
         </Transition>

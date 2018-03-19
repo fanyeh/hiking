@@ -4,7 +4,7 @@
   margin: 0 auto;
   position: relative;
   text-align: center;
-  width: 70%;
+  width: 100%;
 }
 
 .header {
@@ -63,4 +63,10 @@ button.moreInfo {
 .exitActiveRight {
   transition: all 2000ms;
   transform: translate(100%, 0%);
+}
+
+@media screen and (min-width: 768px) {
+  .info {
+    width: 70%;
+  }
 }

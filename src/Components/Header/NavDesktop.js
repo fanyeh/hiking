@@ -32,7 +32,7 @@ class NavDesktop extends Component {
 
   updateMenuBackground(menu) {
     const menuRect = menu.getBoundingClientRect();
-    const navRect = this.refs.navigation.getBoundingClientRect();
+    const navRect = this.refs.navBar.getBoundingClientRect();
     const coords = {
       height: `${menuRect.height}px`,
       width: `${menuRect.width}px`,
@@ -44,12 +44,13 @@ class NavDesktop extends Component {
 
   render() {
     const { showMenuID, showMenuBackground, coords, prevCoords } = this.state;
-    const { navItems } = this.props;
+    const { navItems, menuItems } = this.props;
+
     return (
-      <nav ref="navigation" className={style.navigation}>
+      <nav ref="navBar" className={style.navBar}>
         <MenuBackground toggle={showMenuBackground} coords={coords} prevCoords={prevCoords} />
         <ul className={style.navList}>
-          {navItems.map((item, i) => {
+          {navItems.map((title, i) => {
             return (
               <li
                 key={i}
@@ -58,9 +59,15 @@ class NavDesktop extends Component {
                 onMouseLeave={e => this.leaveMenu(e)}
                 className={style.navItem}
               >
-                <div className={style.navItemName}>{item}</div>
+                <div className={style.navItemName}>{title}</div>
                 {showMenuID === i && (
-                  <MenuItem onMounted={menu => this.updateMenuBackground(menu)} desktop={true} />
+                  <MenuItem
+                    onMounted={menu => this.updateMenuBackground(menu)}
+                    desktop={true}
+                    key={i}
+                  >
+                    {menuItems[title]}
+                  </MenuItem>
                 )}
               </li>
             );

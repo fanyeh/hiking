@@ -1,5 +1,5 @@
 .footerItem {
-  margin: 1em 2em;
+  margin: 0.25em 1em;
 }
 
 .list {
@@ -7,11 +7,17 @@
   padding: 0;
   line-height: 22px;
   composes: secondaryFont from '@css/typography.css';
-  /* font-weight: 100; */
+  font-size: 0.8em;
 }
 
 .list li {
   position: relative;
+}
+
+.footerItem h3 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 1em;
 }
 
 .footerItem img {
@@ -25,4 +31,26 @@
 .footerItem a {
   color: lightgrey;
   padding: 0 0.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .footerItem ul {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footerItem {
+    margin: 1em 2em;
+  }
+
+  .footerItem h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1.25em;
+  }
+
+  .list {
+    font-size: 1em;
+  }
 }

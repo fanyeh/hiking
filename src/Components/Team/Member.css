@@ -1,11 +1,10 @@
 .member {
-  margin: 1em;
   text-align: center;
+  margin: 1em auto;
 }
 
 .name {
-  margin: 0.75em;
-  margin-top: 2em;
+  margin: 1em 0.75em 0.25em 0.75em;
 }
 
 .location {
@@ -13,18 +12,27 @@
 }
 
 .imageContainer {
-  width: 300px;
-  height: 300px;
+  width: 70vw;
+  height: 70vw;
   background-color: grey;
   position: relative;
   overflow: hidden;
   box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
 }
 .imageContainer img {
   position: absolute;
   left: -50px;
+  height: 100%;
 }
 
-.imageContainer img {
-  height: 100%;
+@media screen and (min-width: 1024px) {
+  .imageContainer {
+    width: 300px;
+    height: 300px;
+  }
+
+  .member {
+    margin: 1em;
+  }
 }

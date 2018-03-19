@@ -1,11 +1,12 @@
 @value primary from '@css/colors.css';
 
 .container {
-  width: 23vw;
-  height: 16vw;
+  width: 70%;
+  height: 550px;
   display: flex;
-  margin: 1em;
+  margin: 1em auto;
   box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.2);
+  flex-direction: column;
 }
 
 .container:hover .content h3 {
@@ -13,8 +14,7 @@
 }
 
 .imageContainer {
-  flex-basis: 50%;
-  height: 100%;
+  flex-basis: 80%;
   overflow: hidden;
   position: relative;
 }
@@ -22,7 +22,6 @@
 .mask {
   position: absolute;
   width: 100%;
-  height: 100%;
   transition: opacity 200ms;
   opacity: 0;
 }
@@ -38,10 +37,11 @@
 }
 
 .content {
-  flex-basis: 50%;
+  /* flex-basis: 50%; */
   composes: article from '@css/typography.css';
   padding: 0 2em;
-  box-sizing: border-box;
+  padding-bottom: 2em;
+  /* box-sizing: border-box; */
 }
 
 .content h3 {
@@ -52,4 +52,34 @@
 .content p {
   margin-top: 0;
   word-spacing: 0.25em;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 35vw;
+    margin: 1em;
+  }
+
+  .mask {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1028px) {
+  .container {
+    width: 23vw;
+    height: 16vw;
+    margin: 1em;
+    flex-direction: row;
+  }
+
+  .imageContainer {
+    flex-basis: 50%;
+    height: 100%;
+  }
+
+  .content {
+    flex-basis: 50%;
+    padding: 0 2em;
+    box-sizing: border-box;
+  }
 }

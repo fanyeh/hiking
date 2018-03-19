@@ -1,9 +1,17 @@
 .cardContainer {
   display: flex;
-  justify-content: center;
+  /* justify-content: space-; */
+  flex-direction: column;
 }
 
 .blog {
   background-color: #f6f6f6;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .cardContainer {
+    flex-direction: row;
+    justify-content: center;
+  }
 }

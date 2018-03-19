@@ -6,7 +6,7 @@
 .article {
   composes: secondaryFont;
   font-weight: 100;
-  font-size: 1.05em;
+  font-size: 0.8em;
 }
 
 .caption {
@@ -16,7 +16,7 @@
 
 .headline {
   font-weight: 900;
-  font-size: 6em;
+  font-size: 2.5em;
   letter-spacing: 4px;
 }
 
@@ -25,6 +25,16 @@
   letter-spacing: 2px;
 }
 
-.bgc {
-  background-color: bisque;
+@media screen and (min-width: 769px) {
+  .headline {
+    font-size: 3.75em;
+  }
+  .article {
+    font-size: 1.05em;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .headline {
+    font-size: 6em;
+  }
 }

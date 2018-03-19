@@ -25,21 +25,21 @@ class NavMobile extends Component {
 
   render() {
     const { isToggle, toggleMenuID } = this.state;
-    const { navItems } = this.props;
+    const { navItems, menuItems } = this.props;
     return (
       <div className={style.navMobile}>
         <i className="fas fa-bars fa-2x" onClick={() => this.toggleMenu()} />
         {isToggle && (
           <div className={style.navigation}>
-            {navItems.map((item, index) => (
+            {navItems.map((title, index) => (
               <div
                 key={index}
                 id={index}
                 className={style.navItem}
                 onClick={e => this.toggleMenuItem(e)}
               >
-                {item}
-                {toggleMenuID === index && <MenuItem />}
+                {title}
+                {toggleMenuID === index && <MenuItem>{menuItems[title]}</MenuItem>}
               </div>
             ))}
           </div>

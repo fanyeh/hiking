@@ -1,38 +1,33 @@
 .about {
   text-align: center;
 }
-.imageContainer {
-  width: 100%;
-  padding: 40px 0;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.imageWrapper {
-  overflow: hidden;
-  width: 50%;
-  height: 50vw;
-  display: inline-block;
-}
-
-.imageWrapper:nth-of-type(n + 2) {
-  padding-left: 1.5em;
-}
 
 .detail {
   composes: article from '@css/typography.css';
   line-height: 1.75em;
   text-align: justify;
-  width: 50%;
+  width: 70%;
   margin: 1em auto;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
+}
+.imageContainer {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
-.imageContainer img {
-  height: 100%;
-  transition: transform 400ms;
+.imageWrapper {
+  overflow: hidden;
+  width: calc(50vw - 1em / 2);
+  height: calc(50vw - 1em / 2);
 }
-.imageContainer img:hover {
+
+.imageWrapper img {
+  transition: transform 400ms;
+  height: 100%;
+}
+.imageWrapper img:hover {
   transform: scale(1.1);
 }
 
@@ -41,12 +36,15 @@
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   line-height: 1.75em;
 }
 
 .serviceItem {
-  /* margin: 0 auto; */
+  padding: 2em;
+}
+
+.serviceItem:last-child {
+  padding-bottom: 3em;
 }
 
 .serviceItem h3 {
@@ -59,15 +57,28 @@
 
 @media screen and (min-width: 768px) {
   .imageWrapper {
-    width: calc(100vw / 5);
-    height: calc(100vw / 5);
+    width: calc((100vw - 4em) / 5);
+    height: calc((100vw - 4em) / 5);
+  }
+
+  .detail {
+    width: 50%;
+    margin-bottom: 4em;
+  }
+
+  .serviceItem p {
+    width: 60%;
+    margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 1024px) {
+  .imageContainer {
+    padding: 40px 0;
+  }
   .imageWrapper {
-    width: calc(100vw / 6);
-    height: calc(100vw / 6);
+    width: calc((100vw - 5em) / 6);
+    height: calc((100vw - 5em) / 6);
   }
 
   .services {
@@ -79,11 +90,16 @@
     flex-basis: 300px;
     padding: 3em;
   }
+
+  .serviceItem p {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .imageWrapper {
-    width: calc((100vw - 11.5em) / 8);
-    height: calc((100vw - 11.5em) / 8);
+    width: calc((100vw - 7em) / 8);
+    height: calc((100vw - 7em) / 8);
   }
 }

@@ -3,15 +3,15 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.item {
+  padding: 0.5em 1.25em;
+  text-align: left;
+}
+
 .desktop {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.item {
-  padding: 0.5em 1.25em;
-  text-align: left;
 }
 
 .item:first-of-type {

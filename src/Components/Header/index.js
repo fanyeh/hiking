@@ -8,7 +8,7 @@ class Header extends Component {
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
     this.state = {
-      headerStyle: [style.header],
+      headerStyle: [style.basic],
     };
   }
 
@@ -37,13 +37,21 @@ class Header extends Component {
   }
 
   render() {
-    const navItems = ['Home', 'Pages', 'Treks', 'Gallery', 'Blog', 'Elements', 'Contact'];
+    const menuItems = {
+      Home: ['Home Classic', 'Home Carousel', 'Home Showcase'],
+      Pages: ['About me', 'About us', 'Single Trek 1', 'Single Trek 2', '404'],
+      Treks: ['High ifficulty', 'Mid Difficulty', 'Low Difficulty'],
+      Gallery: ['Classic', 'Filter', 'Single Project 1', 'Single Project 2'],
+      Blog: ['Blog Classic', 'Image Post', 'Slider Post', 'Video Post', 'Facebook Post'],
+    };
+    const navItems = Object.keys(menuItems);
+
     const { headerStyle } = this.state;
     return (
       <header className={headerStyle.join(' ')}>
         <div className={style.logo}>Logo</div>
-        <NavDesktop navItems={navItems} />
-        <NavMobile navItems={navItems} />
+        <NavDesktop navItems={navItems} menuItems={menuItems} />
+        <NavMobile navItems={navItems} menuItems={menuItems} />
       </header>
     );
   }

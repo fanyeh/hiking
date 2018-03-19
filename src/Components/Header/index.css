@@ -1,4 +1,4 @@
-.header {
+.basic {
   white-space: nowrap;
   text-align: center;
   position: relative;
@@ -8,14 +8,12 @@
   z-index: 999;
   transition: all 500ms;
   transition-delay: 200ms;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .change {
   color: black;
   background-color: white;
-  transition: all 500ms;
-  transition-delay: 200ms;
 }
 
 .logo {
