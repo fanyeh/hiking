@@ -31,28 +31,12 @@
   transform: scale(1.1);
 }
 
-.services {
+.service {
   composes: article from '@css/typography.css';
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   line-height: 1.75em;
-}
-
-.serviceItem {
-  padding: 2em;
-}
-
-.serviceItem:last-child {
-  padding-bottom: 3em;
-}
-
-.serviceItem h3 {
-  color: black;
-}
-
-.icon {
-  width: 50px;
 }
 
 @media screen and (min-width: 768px) {
@@ -65,11 +49,6 @@
     width: 50%;
     margin-bottom: 4em;
   }
-
-  .serviceItem p {
-    width: 60%;
-    margin: 0 auto;
-  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -81,19 +60,9 @@
     height: calc((100vw - 5em) / 6);
   }
 
-  .services {
+  .service {
     flex-direction: row;
     justify-content: center;
-  }
-
-  .serviceItem {
-    flex-basis: 300px;
-    padding: 3em;
-  }
-
-  .serviceItem p {
-    width: 100%;
-    margin: 0 auto;
   }
 }
 

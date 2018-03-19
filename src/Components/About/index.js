@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ServiceItem from './ServiceItem';
 import ComponentHeader from '@components/ComponentHeader';
 import style from './index.css';
 class About extends Component {
@@ -60,40 +61,22 @@ class About extends Component {
           inventore earum, deleniti!
         </p>
         {/* Services */}
-        <div className={style.services}>
-          <div className={style.serviceItem}>
-            <div>
-              <img src={require('@img/cloud.svg')} className={style.icon} alt="" />
-            </div>
-            <h3>In Every Conditions</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur
-              sapiente error, voluptas fuga, laudantium ullam magni fugit. Qui!
-            </p>
-          </div>
+        <div className={style.service}>
+          <ServiceItem imageSource={require('@img/cloud.svg')} title="In Every Conditions">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur
+            sapiente error, voluptas fuga, laudantium ullam magni fugit. Qui!
+          </ServiceItem>
 
-          <div className={style.serviceItem}>
-            <div>
-              <img src={require('@img/backpack.svg')} className={style.icon} alt="" />
-            </div>
-            <h3>Professional Team</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur
-              sapiente error, voluptas fuga, laudantium ullam magni fugit. Qui!
-            </p>
-          </div>
-          <div className={style.serviceItem}>
-            <div>
-              <img src={require('@img/knife.svg')} className={style.icon} alt="" />
-            </div>
-            <h3>Expert hikers</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur
-              sapiente error, voluptas fuga, laudantium ullam magni fugit. Qui!
-            </p>
-          </div>
+          <ServiceItem imageSource={require('@img/backpack.svg')} title="Professional Team">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur
+            sapiente error, voluptas fuga, laudantium ullam magni fugit. Qui!
+          </ServiceItem>
+
+          <ServiceItem imageSource={require('@img/knife.svg')} title="Expert hikers">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur
+            sapiente error, voluptas fuga, laudantium ullam magni fugit. Qui!
+          </ServiceItem>
         </div>
-        {/* Show treks */}
         <div className={style.imageContainer}>{images}</div>
       </div>
     );

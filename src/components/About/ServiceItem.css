@@ -1,0 +1,29 @@
+.serviceItem {
+  padding: 2em;
+}
+
+.title {
+  color: black;
+}
+
+.icon {
+  width: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .description {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .serviceItem {
+    flex-basis: 300px;
+    padding: 3em;
+  }
+
+  .description {
+    width: 100%;
+  }
+}
