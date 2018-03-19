@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import ServiceItem from './ServiceItem';
+import Album from './Album';
 import ComponentHeader from '@components/ComponentHeader';
 import style from './index.css';
 class About extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      images: this.createImages(),
-    };
+    this.state = { images: this.createImages() };
     this.updateImages = this.updateImages.bind(this);
   }
 
@@ -20,20 +19,14 @@ class About extends Component {
   }
 
   updateImages() {
-    this.setState({
-      images: this.createImages(),
-    });
+    this.setState({ images: this.createImages() });
   }
 
   createImages() {
     let images = [];
     const qty = this.calcImageQty();
     for (let i = 1; i <= qty; i++) {
-      images.push(
-        <div key={i} className={style.imageWrapper}>
-          <img src={require(`@img/about/about${i}.jpg`)} alt="" />
-        </div>,
-      );
+      images.push(<img src={require(`@img/about/about${i}.jpg`)} alt="" />);
     }
     return images;
   }
@@ -52,7 +45,6 @@ class About extends Component {
           title="ABOUT US"
           description="Lorem ipsum dolor sit amet, consectetur adipisicing elit"
         />
-
         <p className={style.detail}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic reprehenderit eligendi dolor
           incidunt natus commodi doloribus culpa ad iusto suscipit dolores, ex obcaecati molestias,
@@ -60,7 +52,6 @@ class About extends Component {
           facere iure et temporibus reprehenderit, vero laudantium numquam qui odit. Dolor et
           inventore earum, deleniti!
         </p>
-        {/* Services */}
         <div className={style.service}>
           <ServiceItem imageSource={require('@img/cloud.svg')} title="In Every Conditions">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem harum aspernatur
@@ -77,7 +68,7 @@ class About extends Component {
             sapiente error, voluptas fuga, laudantium ullam magni fugit. Qui!
           </ServiceItem>
         </div>
-        <div className={style.imageContainer}>{images}</div>
+        <Album images={images} />
       </div>
     );
   }
