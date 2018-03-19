@@ -20,26 +20,44 @@ class NavMobile extends Component {
     if (menuID === toggleMenuID) {
       menuID = -1;
     }
+    this.refs.navigation.style.height = `170px`;
     this.setState({ toggleMenuID: menuID });
+  }
+
+  updateNavHeight(elem) {
+    this.refs.navigation.style.height = `${elem.offsetHeight + 170}px`;
   }
 
   render() {
     const { isToggle, toggleMenuID } = this.state;
     const { navItems, menuItems } = this.props;
+    const styleOnToggle = {
+      color: '#cbbd9a',
+      transform: 'rotate(90deg)',
+    };
     return (
       <div className={style.navMobile}>
         <i className="fas fa-bars fa-2x" onClick={() => this.toggleMenu()} />
         {isToggle && (
-          <div className={style.navigation}>
+          <div className={style.navigation} ref="navigation">
             {navItems.map((title, index) => (
               <div
                 key={index}
                 id={index}
                 className={style.navItem}
                 onClick={e => this.toggleMenuItem(e)}
+                style={toggleMenuID === index ? { color: '#cbbd9a' } : null}
               >
                 {title}
-                {toggleMenuID === index && <MenuItem>{menuItems[title]}</MenuItem>}
+                <i
+                  className="fas fa-arrow-right"
+                  style={toggleMenuID === index ? styleOnToggle : null}
+                />
+                {toggleMenuID === index && (
+                  <MenuItem onMounted={elem => this.updateNavHeight(elem)}>
+                    {menuItems[title]}
+                  </MenuItem>
+                )}
               </div>
             ))}
           </div>

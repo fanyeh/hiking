@@ -49,7 +49,10 @@ class Header extends Component {
     const { headerStyle } = this.state;
     return (
       <header className={headerStyle.join(' ')}>
-        <div className={style.logo}>Logo</div>
+        <div className={style.logo}>
+          <div className={style.logoImage} />
+          <h5 className={style.brand}>EVEREST</h5>
+        </div>
         <NavDesktop navItems={navItems} menuItems={menuItems} />
         <NavMobile navItems={navItems} menuItems={menuItems} />
       </header>

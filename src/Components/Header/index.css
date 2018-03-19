@@ -19,7 +19,41 @@
 .logo {
   display: inline-block;
   position: absolute;
-  left: 50px;
+  left: 20px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.logoImage {
+  width: 60px;
+  height: 31px;
+  background-image: url('../../assets/images/logo_white.svg');
+  background-size: cover;
+}
+
+.brand {
+  margin: 0;
+  letter-spacing: 0.1em;
+  font-size: 0.7em;
+}
+
+.change .brand {
+  color: black;
+}
+.change .logoImage {
+  background-image: url('../../assets/images/logo_black.svg');
+}
+@media screen and (min-width: 1024px) {
+  .logoImage {
+    width: 80px;
+    height: 51px;
+  }
+  .brand {
+    /* letter-spacing: 0.2em; */
+    font-size: 0.9em;
+  }
+
+  .logo {
+    left: 50px;
+  }
 }

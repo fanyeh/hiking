@@ -7,7 +7,7 @@ class Footer extends Component {
     return (
       <div className={style.footer}>
         <div className={style.itemContainer}>
-          <FooterItem title="Dolomia">
+          <FooterItem title="EVEREST">
             <li>Home</li>
             <li>Pages</li>
             <li>Portfolio</li>

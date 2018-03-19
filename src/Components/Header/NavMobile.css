@@ -1,13 +1,4 @@
-.navigation {
-  position: absolute;
-  width: 100vw;
-  background-color: white;
-  right: -20px;
-  top: 40px;
-  color: black;
-  text-align: left;
-}
-
+@value primary from '@css/colors.css';
 .navMobile {
   display: inline-block;
   position: absolute;
@@ -16,10 +7,35 @@
   transform: translateY(-50%);
   display: none;
 }
+.navigation {
+  position: absolute;
+  width: 100vw;
+  background-color: white;
+  right: -20px;
+  top: 40px;
+  color: black;
+  text-align: left;
+  transition: height 200ms ease-out;
+  height: 170px;
+  border-top: 2px solid primary;
+}
 
 .navItem {
-  padding: 0.5em 0;
-  padding-left: 1em;
+  padding: 0.5em 0 0.5em 1em;
+}
+
+.navItem i {
+  color: Grey;
+  float: right;
+  margin-right: 2em;
+  transition: all 300ms;
+}
+
+@media screen and (min-width: 415px) {
+  .navigation {
+    width: 30vw;
+    right: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
